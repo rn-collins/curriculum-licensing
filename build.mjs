@@ -96,9 +96,9 @@ function nav() {
   const links = NAV_LINKS.map(([h, t]) => `<li><a href="${h}">${t}</a></li>`).join('\n');
   return `<header class="nav">
   <div class="nav__in">
-    <a class="nav__brand" href="/" aria-label="RN Collins Curriculum home">
+    <a class="nav__brand" href="/" aria-label="Aloha AI home">
       ${leaf('#1B7A68')}
-      RN&nbsp;Collins&nbsp;·&nbsp;Curriculum
+      Aloha&nbsp;AI
     </a>
     <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="navlinks" aria-label="Open menu">
       <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -120,7 +120,7 @@ function footer() {
     <h2 id="foot-h" class="small" style="position:absolute;left:-999px">Site footer</h2>
     <div class="footer__grid">
       <div>
-        <a class="nav__brand" href="/" style="color:var(--cream)" aria-label="RN Collins Curriculum home">${leaf('#7FE0C4')} RN&nbsp;Collins&nbsp;·&nbsp;Curriculum</a>
+        <a class="nav__brand" href="/" style="color:var(--cream)" aria-label="Aloha AI home">${leaf('#7FE0C4')} Aloha&nbsp;AI&nbsp;·&nbsp;Curriculum</a>
         <p class="small" style="margin-top:var(--s3);max-width:40ch;color:#9FB6AE">Complete, delivery-ready academic programs and courses for institutions — available to license, customize, or commission from scratch.</p>
       </div>
       <div>
