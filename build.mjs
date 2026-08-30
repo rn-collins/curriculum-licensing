@@ -8,7 +8,7 @@ import { writeFileSync } from 'node:fs';
 const SITE = 'https://curriculum-licensing.vercel.app';
 const EMAIL = 'collins.ra@northeastern.edu';
 const ALOHA = 'https://aloha-ai-consulting.vercel.app';
-const ALOHA_U = 'https://aloha-ai-consulting.vercel.app/university';
+const ALOHA_U = 'https://aloha-ai-consulting.vercel.app/learning/';
 
 const leaf = (fill) =>
   `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c3 3.5 4.5 6.5 4.5 9.2 0 3.4-2 5.8-4.5 5.8s-4.5-2.4-4.5-5.8C7.5 8.5 9 5.5 12 2z" fill="${fill}"/><path d="M4 20c3-1.2 5.4-1.8 8-1.8s5 .6 8 1.8" stroke="${fill}" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>`;
@@ -40,6 +40,13 @@ function head(title, desc, canonical) {
 <meta name="twitter:title" content="${title}">
 <meta name="twitter:description" content="${desc}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="RN Collins Curriculum">
+<meta property="og:image" content="${SITE}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RN Collins Curriculum — complete courses, academic programs, and curriculum-development services. Programs run 30 credits across ten three-credit courses in a seven-week format.">
+<meta name="twitter:image" content="${SITE}/og.png">
 <script>document.documentElement.className+=' js';</script>
 <link rel="stylesheet" href="/aloha-ds.css">
 <script type="application/ld+json">
@@ -139,7 +146,7 @@ function footer() {
         <h3>Ecosystem</h3>
         <ul>
           <li><a href="${ALOHA}" target="_blank" rel="noopener">Aloha AI →</a></li>
-          <li><a href="${ALOHA_U}" target="_blank" rel="noopener">Aloha AI University</a></li>
+          <li><a href="${ALOHA_U}" target="_blank" rel="noopener">Aloha AI Learning</a></li>
           <li><a href="/about">About RN Collins</a></li>
           <li><a href="https://www.linkedin.com/in/rn-collins" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="mailto:${EMAIL}?subject=Curriculum%20licensing%20inquiry">${EMAIL}</a></li>
@@ -324,7 +331,7 @@ page('index.html',
           <p class="lead">This site licenses <b style="color:var(--teal-mint)">institutional, credit-bearing curriculum</b> to organizations. If you're an individual, team, or organization looking to learn and use AI directly, that's <b style="color:var(--teal-mint)">Aloha AI</b> — a separate practice with its own courses, playbooks, and tools.</p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="${ALOHA}" target="_blank" rel="noopener">Visit Aloha AI →</a>
-            <a class="btn btn--ghost" href="${ALOHA_U}" target="_blank" rel="noopener">Aloha AI University</a>
+            <a class="btn btn--ghost" href="${ALOHA_U}" target="_blank" rel="noopener">Aloha AI Learning</a>
           </div>
         </div>
         <div class="reveal">
@@ -377,6 +384,18 @@ page('programs.html',
       <div class="card reveal" style="margin-top:var(--s6);background:var(--teal-l);border-color:#BADFD6">
         <h3 style="font-size:var(--fs-h3)">Additional programs</h3>
         <p class="muted small" style="margin-bottom:0">Other bachelor's and master's concepts have been discussed within this portfolio. New programs and courses are developed only from documented prior approval — never by inference. To discuss a program not listed here, <a href="/request">request a proposal</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--paper">
+    <div class="wrap" style="max-width:820px">
+      <div class="reveal stack">
+        <h2 class="h2">What a licensed program includes</h2>
+        <p>A program is the ten courses plus the institutional documents that make them teachable: program and course learning outcomes with their mapping, the seven-week module structure, assessments and their rubrics, faculty guidance, student-facing documentation, and an implementation plan. The <a href="/licensing">licensing page</a> lists what accompanies each offering and the permitted-use models available, from a single campus to a defined number of cohorts.</p>
+        <h2 class="h2">How to evaluate one for your catalogue</h2>
+        <p>Four questions usually settle whether an existing program fits. Whether your credit and term structure accommodates ten three-credit courses in a seven-week format, or needs the sequence reflowed. Whether the program outcomes match what your accreditor and your catalogue already claim. Which of the ten courses duplicate offerings you run. And what your faculty need in order to teach material they did not write. The first three are answered by reading the program documents; the fourth is an implementation question, which is what the support models exist for.</p>
+        <h2 class="h2">If neither program fits</h2>
+        <p>These two are listed because they are built. A different discipline, a certificate rather than a degree, or a workforce program on a different clock is development work rather than licensing, and belongs on the <a href="/curriculum-development">curriculum development</a> path. Worth saying plainly: there is no larger catalogue of finished programs behind this page. What you see here is what exists today.</p>
       </div>
     </div>
   </section>
@@ -505,6 +524,18 @@ page('curriculum-development.html',
       <div class="sec-head reveal"><p class="eyebrow">Scope</p><h2 class="h2">One course, or an entire portfolio</h2></div>
       <p class="lead measure reveal">Projects may involve a single course, a complete degree, a certificate, an internal academy, a professional-development program, or a larger portfolio of related offerings. Clients may begin with an existing course or program, commission an entirely new curriculum, or combine licensing with customization and implementation.</p>
       <div class="hero__cta" style="margin-top:var(--s5)"><a class="btn btn--primary" href="/request">Request a proposal →</a><a class="btn btn--outline" href="/method">See the method</a></div>
+    </div>
+  </section>
+  <section class="section section--paper">
+    <div class="wrap" style="max-width:820px">
+      <div class="reveal stack">
+        <h2 class="h2">How a commissioned program is built</h2>
+        <p>Development follows the same order as the licensed programs, set out in full on <a href="/method">Method</a>: establish the program architecture, define the program learning outcomes, design the course sequence through dependency analysis, then produce complete course documentation. Weekly module development begins only once that documentation is approved. The order is the point — reversing it is what produces gaps, rework, and courses that quietly disagree with one another.</p>
+        <h2 class="h2">What determines scope</h2>
+        <p>A ten-course program is a conservative 1,700 to 3,200 hours across the development functions listed above. Where a particular engagement falls in that range depends on subject complexity, whether laboratory or case-study development is required, how much primary research the subject demands, and revision volume once institutional review begins. Those are planning ranges rather than time records, and <a href="/services-rendered">Services rendered</a> breaks them down workstream by workstream.</p>
+        <h2 class="h2">Starting from something that already exists</h2>
+        <p>Many engagements start from material rather than from nothing. An outdated catalogue, an incomplete proposal, a program that no longer matches the careers it feeds, or a curriculum that has to move to an accelerated format are all modernization work, and each begins with an audit of what can be kept. That is usually the shorter and less expensive path, and it is worth establishing whether it applies before commissioning new development.</p>
+      </div>
     </div>
   </section>
   ${ctaBand()}`
@@ -664,11 +695,22 @@ page('about.html',
       <div class="reveal stack">
         <p>RN Collins builds academic programs as operational instructional systems — from degree architecture and program outcomes through course documentation, seven-week modules, assessments, and the faculty and student guidance needed to actually teach and complete the work.</p>
         <p>The work integrates functions institutions normally divide among program architects, curriculum and instructional designers, subject-matter researchers, assessment designers, faculty-development and student-experience writers, accessibility reviewers, documentation engineers, editors, quality-assurance reviewers, and project managers.</p>
-        <p>This site is one line of a broader ecosystem. For applied, direct-to-learner AI education, see <a href="${ALOHA}" target="_blank" rel="noopener">Aloha AI</a> and <a href="${ALOHA_U}" target="_blank" rel="noopener">Aloha AI University</a>.</p>
+        <p>This site is one line of a broader ecosystem. For applied, direct-to-learner AI education, see <a href="${ALOHA}" target="_blank" rel="noopener">Aloha AI</a> and its <a href="${ALOHA_U}" target="_blank" rel="noopener">courses and masterclasses</a>.</p>
       </div>
       <div class="hero__cta" style="margin-top:var(--s6)">
         <a class="btn btn--primary" href="/request">Request a proposal →</a>
         <a class="btn btn--outline" href="https://www.linkedin.com/in/rn-collins" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap" style="max-width:820px">
+      <div class="reveal stack">
+        <h2 class="h2">What one practice integrating fourteen functions means</h2>
+        <p>Institutions normally divide this work among program architects, curriculum and instructional designers, subject-matter researchers, assessment designers, faculty-development and student-experience writers, academic policy and credential analysts, accessibility reviewers, documentation engineers, editors, quality-assurance reviewers, and project managers. Dividing it is also how gaps appear: outcomes written by one person, assessments by another, documentation by a third, and nobody holding the mapping between them.</p>
+        <p>Integrating those functions removes the handoffs where alignment is usually lost. An outcome that cannot actually be assessed surfaces while the assessment is being designed, because the same person wrote both. A prerequisite that does not hold surfaces during sequencing rather than in a student's second term. The visible files are the smaller part of what is delivered; the architecture connecting them is the substance.</p>
+        <h2 class="h2">How to check the claim</h2>
+        <p>Two pages exist so this work can be examined instead of taken on trust. <a href="/method">Method</a> sets out the development order — architecture, then program outcomes, then sequencing, then complete course documentation — with weekly module development beginning only once documentation is approved. <a href="/services-rendered">Services rendered</a> gives the conservative effort reconstruction for a ten-course program, workstream by workstream, as planning ranges rather than time records.</p>
       </div>
     </div>
   </section>`
@@ -696,6 +738,18 @@ page('request.html',
       </div>
       <div class="card reveal" style="margin-top:var(--s6);background:var(--teal-l);border-color:#BADFD6">
         <p style="margin:0">Prefer to write directly? <a href="mailto:${EMAIL}?subject=Curriculum%20licensing%20inquiry"><b>${EMAIL}</b></a></p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap" style="max-width:820px">
+      <div class="reveal stack">
+        <h2 class="h2">What to include</h2>
+        <p>Each option above opens an email with a prefilled subject and four prompts: institution, program or course of interest, delivery model, and timeline. Those four answers are what make a first reply useful rather than a request for more information. Where a decision date, an accreditation deadline, or a term start is driving the work, saying so at the outset changes what can realistically be proposed.</p>
+        <h2 class="h2">What comes back</h2>
+        <p>A proposal identifies which of the three paths fits — licensing something that already exists, customizing it for your institution, or commissioning new development — together with scope, sequence, and the permitted-use model. Where an existing program can be adapted to your requirement, that is said plainly, because adapting is usually faster and less expensive than commissioning.</p>
+        <h2 class="h2">If you are still deciding</h2>
+        <p>Reading <a href="/method">Method</a> and <a href="/services-rendered">Services rendered</a> before writing tends to shorten the first exchange. Between them they show the development order and the effort a complete program actually takes, which is usually the information that settles whether licensing or development is the right question to be asking.</p>
       </div>
     </div>
   </section>`
